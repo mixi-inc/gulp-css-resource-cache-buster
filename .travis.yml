@@ -1,0 +1,10 @@
+language: node_js
+
+node_js:
+  - "stable"
+  - "iojs"
+
+sudo: false
+
+notifications:
+  email: false

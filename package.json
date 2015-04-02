@@ -1,0 +1,37 @@
+{
+  "name": "gulp-css-resource-cache-buster",
+  "version": "1.0.0",
+  "description": "Cache buster plugin for remote/local resources specified by CSS.",
+  "main": "css-resource-cache-buster.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "$(npm bin)/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kuniwak/gulp-css-resource-cache-buster"
+  },
+  "keywords": [
+    "gulpplugin"
+  ],
+  "author": "Kuniwak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kuniwak/gulp-css-resource-cache-buster/issues"
+  },
+  "homepage": "https://github.com/Kuniwak/gulp-css-resource-cache-buster",
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "chai-as-promised": "^4.3.0",
+    "mocha": "^2.2.1",
+    "multiline": "^1.0.2"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.4",
+    "lodash": "^3.6.0",
+    "request": "^2.54.0",
+    "through2": "^0.6.3"
+  }
+}
