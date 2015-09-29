@@ -1,6 +1,7 @@
 gulp-css-resource-cache-buster
 ==============================
-[![Build Status](https://travis-ci.org/Kuniwak/gulp-css-resource-cache-buster.svg)](https://travis-ci.org/Kuniwak/gulp-css-resource-cache-buster)
+[![Build Status](https://travis-ci.org/mixi-inc/gulp-css-resource-cache-buster.svg)](https://travis-ci.org/mixi-inc/gulp-css-resource-cache-buster)
+[![npm version](https://badge.fury.io/js/gulp-css-resource-cache-buster.svg)](http://badge.fury.io/js/gulp-css-resource-cache-buster)
 
 Cache buster for resources specified in CSS files.
 
@@ -45,3 +46,16 @@ gulp.src('path/to/file.css')
   }))
   .pipe(gulp.dest('path/to/modified-file.css'));
 ```
+
+Install
+-------
+
+```shell
+npm install --save-dev gulp-css-resource-cache-buster
+```
+
+
+License
+-------
+
+MIT
