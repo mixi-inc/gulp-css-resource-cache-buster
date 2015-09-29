@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kuniwak/gulp-css-resource-cache-buster"
+    "url": "https://github.com/mixi-inc/gulp-css-resource-cache-buster"
   },
   "keywords": [
     "gulpplugin"
@@ -19,12 +19,12 @@
   "author": "Kuniwak",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Kuniwak/gulp-css-resource-cache-buster/issues"
+    "url": "https://github.com/mixi-inc/gulp-css-resource-cache-buster/issues"
   },
-  "homepage": "https://github.com/Kuniwak/gulp-css-resource-cache-buster",
   "engines": {
     "node" : ">=0.12"
   },
+  "homepage": "https://github.com/mixi-inc/gulp-css-resource-cache-buster",
   "devDependencies": {
     "chai": "^2.2.0",
     "chai-as-promised": "^4.3.0",
