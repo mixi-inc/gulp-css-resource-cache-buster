@@ -1,6 +1,6 @@
 {
   "name": "gulp-css-resource-cache-buster",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cache buster plugin for remote/local resources specified by CSS.",
   "main": "css-resource-cache-buster.js",
   "directories": {
