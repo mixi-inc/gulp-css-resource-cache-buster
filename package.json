@@ -22,6 +22,9 @@
     "url": "https://github.com/Kuniwak/gulp-css-resource-cache-buster/issues"
   },
   "homepage": "https://github.com/Kuniwak/gulp-css-resource-cache-buster",
+  "engines": {
+    "node" : ">=0.12"
+  },
   "devDependencies": {
     "chai": "^2.2.0",
     "chai-as-promised": "^4.3.0",
