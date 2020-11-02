@@ -76,7 +76,7 @@
               .then(function(md5Map) {
                   var cssContent = cssFile.contents.toString('utf8');
                   var modifiedCssContent = replaceUrl(cssContent, md5Map);
-                  cssFile.contents = new Buffer(modifiedCssContent);
+                  cssFile.contents = Buffer.from(modifiedCssContent);
 
                   next(null, cssFile);
               })
