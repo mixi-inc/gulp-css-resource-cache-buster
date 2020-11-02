@@ -8,8 +8,7 @@
   var lodash = require('lodash');
   var request = require('request');
   var through2 = require('through2');
-  var gutil = require('gulp-util');
-  var PluginError = gutil.PluginError;
+  var PluginError = require('plugin-error');
 
   var CSS_URL_MATCHER = /(url\s*\(\s*['"]?)(.*?)(['"]?\s*\))/g;
   var PLUGIN_NAME = 'gulp-css-resource-cache-buster';
