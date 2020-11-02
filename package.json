@@ -26,15 +26,15 @@
   },
   "homepage": "https://github.com/mixi-inc/gulp-css-resource-cache-buster",
   "devDependencies": {
-    "chai": "^2.2.0",
-    "chai-as-promised": "^4.3.0",
-    "mocha": "^2.2.1",
-    "multiline": "^1.0.2"
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^8.2.0",
+    "multiline": "^2.0.0"
   },
   "dependencies": {
     "plugin-error": "^1.0.1",
-    "lodash": "^3.6.0",
+    "lodash": "^4.17.15",
     "request": "^2.54.0",
-    "through2": "^0.6.3"
+    "through2": "^4.0.2"
   }
 }
