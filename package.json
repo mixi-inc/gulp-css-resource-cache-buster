@@ -22,7 +22,7 @@
     "url": "https://github.com/mixi-inc/gulp-css-resource-cache-buster/issues"
   },
   "engines": {
-    "node": ">=0.12"
+    "node": ">=10.23.0"
   },
   "homepage": "https://github.com/mixi-inc/gulp-css-resource-cache-buster",
   "devDependencies": {
