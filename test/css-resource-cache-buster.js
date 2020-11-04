@@ -106,7 +106,7 @@ src: url(path/to/local/file?md5-by-cache-buster=d41d8cd98f00b204e9800998ecf8427e
     return {
       isNull: lodash.constant(false),
       isStream: lodash.constant(false),
-      contents: new Buffer(content),
+      contents: Buffer.from(content),
     };
   }
 });
