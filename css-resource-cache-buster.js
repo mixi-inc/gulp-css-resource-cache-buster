@@ -6,7 +6,7 @@
   var crypto = require('crypto');
 
   var lodash = require('lodash');
-  var request = require('request');
+  var request = require('@cypress/request');
   var through2 = require('through2');
   var PluginError = require('plugin-error');
 

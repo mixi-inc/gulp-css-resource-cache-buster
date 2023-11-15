@@ -5,7 +5,6 @@ var expect = chai.expect;
 var chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 
-var multiline = require('multiline');
 var lodash = require('lodash');
 var cssResourceCacheBuster = require('../css-resource-cache-buster');
 
@@ -58,16 +57,16 @@ describe('cssResourceCacheBuster', function() {
       'path/to/local/file': '/dev/null',
       'path/to/remote/file': 'http://devnull-as-a-service.com/dev/null',
     });
-    var cssContent = multiline(function() {/*
+    var cssContent = `
 src: url(path/to/remote/file);
 src: url(path/to/local/file);
-*/});
+`;
 
     stream.on('data', function(file) {
-      var expectedCssContent = multiline(function() {/*
+      var expectedCssContent = `
 src: url(path/to/remote/file?md5-by-cache-buster=d41d8cd98f00b204e9800998ecf8427e);
 src: url(path/to/local/file?md5-by-cache-buster=d41d8cd98f00b204e9800998ecf8427e);
-*/});
+`;
 
       expect(String(file.contents)).to.equal(expectedCssContent);
       done();
