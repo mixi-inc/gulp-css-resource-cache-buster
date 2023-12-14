@@ -33,7 +33,7 @@ describe('cssResourceCacheBuster', function() {
 
   it('should replace a remote URL that is in the specified URL convert table', function(done) {
     var stream = cssResourceCacheBuster({
-      'path/to/remote/file': 'http://devnull-as-a-service.com/dev/null'
+      'path/to/remote/file': 'https://devnull-as-a-service.com/dev/null'
     });
 
     stream.on('data', function(file) {
@@ -55,7 +55,7 @@ describe('cssResourceCacheBuster', function() {
   it('should replace URLs that is not in the specified URL convert table', function(done) {
     var stream = cssResourceCacheBuster({
       'path/to/local/file': '/dev/null',
-      'path/to/remote/file': 'http://devnull-as-a-service.com/dev/null',
+      'path/to/remote/file': 'https://devnull-as-a-service.com/dev/null',
     });
     var cssContent = `
 src: url(path/to/remote/file);
