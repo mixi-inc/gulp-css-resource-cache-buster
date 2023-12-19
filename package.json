@@ -1,6 +1,6 @@
 {
   "name": "gulp-css-resource-cache-buster",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Cache buster plugin for remote/local resources specified by CSS.",
   "main": "css-resource-cache-buster.js",
   "directories": {
@@ -31,7 +31,6 @@
     "mocha": "^10.2.0"
   },
   "dependencies": {
-    "@cypress/request": "^2.88.12",
     "lodash": "^4.17.15",
     "plugin-error": "^2.0.1",
     "through2": "^4.0.2"

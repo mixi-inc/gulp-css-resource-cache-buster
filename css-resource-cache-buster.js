@@ -4,9 +4,9 @@
   var url = require('url');
   var fs = require('fs');
   var crypto = require('crypto');
+  var https = require('https');
 
   var lodash = require('lodash');
-  var request = require('@cypress/request');
   var through2 = require('through2');
   var PluginError = require('plugin-error');
 
@@ -150,32 +150,28 @@
           var md5sum = crypto.createHash('md5');
           md5sum.setEncoding('hex');
 
-          var contentStream = isRemotePath(urlToFile) ?
-              getContentByRemote(urlToFile) :
-              getContentByLocal(urlToFile);
-
-          contentStream.on('end', function() {
-              md5sum.end();
-              resolve(md5sum.read());
-          });
-
-          contentStream.on('error', reject);
-          contentStream.pipe(md5sum);
+          if (isRemotePath(urlToFile)) {
+              https.get(urlToFile, (res) => {
+                  res.on('end', () => {
+                      md5sum.end();
+                      resolve(md5sum.read());
+                  });
+                  res.on('error', reject);
+                  res.pipe(md5sum);
+              });
+          } else {
+              var contentStream = fs.createReadStream(urlToFile);
+              contentStream.on('end', () => {
+                  md5sum.end();
+                  resolve(md5sum.read());
+              });
+              contentStream.on('error', reject);
+              contentStream.pipe(md5sum);
+          }
       });
 
       return promisedMd5;
   }
-
-
-  function getContentByRemote(urlToFile) {
-      return request.get(urlToFile);
-  }
-
-
-  function getContentByLocal(pathToFile) {
-      return fs.createReadStream(pathToFile);
-  }
-
 
   module.exports = cssResourceCacheBuster;
 })();
